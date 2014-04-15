@@ -1,3 +1,10 @@
 extends layout
+
+block head
+  link(rel='stylesheet', href='/css/challenge.css')
+
 block content
-  div=challenge
+  .title=challenge.title
+
+block scripts
+  script(src='/js/challenge.js')

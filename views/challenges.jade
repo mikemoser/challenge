@@ -1,0 +1,12 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/css/challenges.css')
+
+block content
+  each challenge in challenges
+    .title
+      a(href='/challenges/' + challenge._id)=challenge.title
+
+block scripts
+  script(src='/js/challenges.js')

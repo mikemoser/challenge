@@ -1,5 +1,7 @@
 (function (undefined) {
   module.exports = {
-    Challenge: require('./challenge')
+    Landing: require('./landing'),
+    Challenge: require('./challenge'),
+    Challenges: require('./challenges')
   }
 })();

@@ -2,15 +2,15 @@
   var Services = require('../services');
 
   var ViewModel = function () {
-    this.challenge = null;
+    this.challenges = [];
   }
 
   function create(id) {
     var viewModel = new ViewModel();
 
-    return Services.Challenge.getChallenge(id)
-    .then(function (challenge) {
-      viewModel.challenge = challenge;
+    return Services.Challenge.getChallenges()
+    .then(function (challenges) {
+      viewModel.challenges = challenges;
       return viewModel;
     });
   }

@@ -18,15 +18,14 @@
     };
   }
 
-  function create(callback) {
+  function create(id) {
     var viewModel = new ViewModel();
 
-    // return Services.User.getUsers()
-    // .then(function (results) {
-    //   viewModel.users = results;
-    //   return viewModel;
-    // });
-    callback(null, viewModel);
+    return Services.Challenge.getChallenge(id)
+    .then(function (challenge) {
+      viewModel.challenge = challenge;
+      return viewModel;
+    });
   }
 
   module.exports.create = create;

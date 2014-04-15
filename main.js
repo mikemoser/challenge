@@ -18,15 +18,12 @@
   app.use('/js', express.static(__dirname + '/js'));
   
   app.get('/', function (req, res) {
-    ViewModels.Users.create()
-    .then(function(result) {
-      res.render('users', result);
-    });
+      
   });
 
   app.get('/challenges/:id', function (req, res) {
-    ViewModels.Challenge.create(function(err, viewModel) {
-      console.log(viewModel);
+    ViewModels.Challenge.create(req.params.id)
+    .then(function (viewModel) {
       res.render('challenge', viewModel);
     });
   });

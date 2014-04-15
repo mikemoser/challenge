@@ -4,7 +4,7 @@
   var mongoose = require('mongoose');
   var ViewModels = require('./viewmodels');
 
-  mongoose.connect('mongodb://127.0.0.1:27017/practice');
+  mongoose.connect('mongodb://127.0.0.1:27017/challenge');
 
   var server = app.listen(3000, function() {
     console.log('Listening on port %d', server.address().port);

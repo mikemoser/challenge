@@ -1,0 +1,61 @@
+doctype html5
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='en', prefix='og: http://ogp.me/ns#')
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='en', prefix='og: http://ogp.me/ns#')
+//if IE 8
+  html.no-js.lt-ie9(lang='en', prefix='og: http://ogp.me/ns#')
+//[if gt IE 8]><!
+html.no-js.cssSandpaper-transform(lang='en', prefix='og: http://ogp.me/ns#')
+  //<![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    
+    block title
+
+    block metaTags
+      
+    link(rel='stylesheet', href='/css/common.css')
+    script(src='/js/libs/modernizr.js')
+    script(src='/js/libs/css3-mediaqueries.js')
+
+    block head
+    
+  body
+    #wrapper
+      #header-container
+        #header-content.clearfix
+          block headerLogo
+            a(href='/')
+              #header-logo='Example'
+          block headerRightContent
+      
+      #page-container
+        block content
+      #push
+
+    #footer-container
+      #footer-content.clearfix
+        ul#footer-left
+          block footerRightListItem
+          li 
+            a(href='mailto:info@example.com')='info@example.com'
+          li 
+            a(href='http://blog.example.com')='Blog'
+        ul#footer-right
+          block footerLegal
+            li
+              a(href='/terms')='Terms'
+            li
+              a(href='/privacy')='Privacy'
+            li © 2014 Example Inc.
+
+    block jqueryScripts
+      script(src='/js/libs/jquery-1.7.2.min.js') //TODO: Pull from Google
+      script(src='/js/libs/jquery-ui-1.8.21.custom.min.js')
+      
+    script(src='/js/libs/html5.js')
+    script(src='/js/util.js')
+
+    block scripts

@@ -24,4 +24,11 @@
     });
   });
 
+  app.get('/challenges/:id', function (req, res) {
+    ViewModels.Challenge.create(function(err, viewModel) {
+      console.log(viewModel);
+      res.render('challenge', viewModel);
+    });
+  });
+
 })();
